@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+- rule: Запрос баланса
+  steps:
+  - intent: inform
+    entities:
+    - service: "баланс"
+  - action: utter_default
+
+- rule: Запрос кредита
+  steps:
+  - intent: inform
+    entities:
+    - service: "кредит"
+  - action: utter_default
+
+- rule: Запрос услуг
+  steps:
+  - intent: inform
+    entities:
+    - service: "услуги"
+  - action: utter_default

@@ -1,0 +1,30 @@
+version: "2.0"
+
+stories:
+- story: Приветствие и прощание
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Запрос баланса
+  steps:
+  - intent: inform
+    entities:
+    - service: "баланс"
+  - action: utter_default
+
+- story: Запрос кредита
+  steps:
+  - intent: inform
+    entities:
+    - service: "кредит"
+  - action: utter_default
+
+- story: Запрос услуг
+  steps:
+  - intent: inform
+    entities:
+    - service: "услуги"
+  - action: utter_default

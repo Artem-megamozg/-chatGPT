@@ -1,0 +1,31 @@
+version: "2.0"
+
+slots:
+  service:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: service
+
+intents:
+  - greet
+  - goodbye
+  - inform
+  - thanks
+  - deny
+
+responses:
+  utter_greet:
+    - text: "Привет! Чем могу помочь?"
+
+  utter_goodbye:
+    - text: "До свидания! Надеюсь, я вам помог."
+
+  utter_default:
+    - text: "Извините, я не совсем понял ваш запрос."
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_default
+
